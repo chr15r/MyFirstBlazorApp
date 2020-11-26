@@ -6,7 +6,7 @@ using System.Text;
 
 namespace eShop.UseCases.SearchProductScreen
 {
-    public class SearchProduct
+    public class SearchProduct : ISearchProduct
     {
         private readonly IProductRepository productRepository;
 

@@ -1,0 +1,31 @@
+﻿@page "/products"
+@inject ISearchProduct searchProduct
+
+<h3>Search Products</h3>
+<br />
+
+<div>
+    Search:
+    <input type="text" />
+    <button>Search</button>
+</div><br />
+
+<ul>
+    @foreach (var product in products)
+    {
+        <li>@product.Name</li>
+    }
+</ul>
+
+@code {
+
+    private IEnumerable<Product> products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        products = searchProduct.Execute();
+
+    }
+}
