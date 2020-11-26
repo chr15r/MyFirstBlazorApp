@@ -1,0 +1,15 @@
+﻿@if(this.product != null)
+{
+<tr>
+    <td>@product.Name</td>
+    <td>@product.Brand</td>
+    <td>@product.Price.ToString("c")</td>
+</tr>
+}
+
+
+@code {
+
+    [Parameter]
+    public Product product { get; set; }
+}
