@@ -1,10 +1,15 @@
-﻿@if(this.product != null)
+﻿@if (this.product != null)
 {
-<tr>
-    <td>@product.Name</td>
-    <td>@product.Brand</td>
-    <td>@product.Price.ToString("c")</td>
-</tr>
+    <tr>
+        <td>
+            <NavLink href="@($"product/{product.Id}")">
+                @product.Name
+            </NavLink>
+           
+        </td>
+        <td>@product.Brand</td>
+        <td>@product.Price.ToString("c")</td>
+    </tr>
 }
 
 
