@@ -3,5 +3,20 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+<br /><br />
+Product Name: @product.Name
+<br />
+<br />
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<!-- 2-way data binding -->
+<input type="text" @bind-value="product.Name" @bind-value:event="oninput" />
+<br /><br />
+<input type="checkbox" @bind-value="isActive" />&nbsp;Is Active
+@isActive
+
+@code {
+
+    private bool isActive = false;
+    private Product product = new Product { Id = 495, Brand = "maybelline", Name = "Maybelline Face Studio Master Hi-Light Light Booster Bronzer", Price = 14.99, ImageLink = "https://d3t32hsnjxo7q6.cloudfront.net/i/991799d3e70b8856686979f8ff6dcfe0_ra,w158,h184_pa,w158,h184.png", Description = "Maybelline Face Studio Master Hi-Light Light Boosting bronzer formula has an expert  balance of shade + shimmer illuminator for natural glow. Skin goes  soft-lit with zero glitz.    For Best Results: Brush over all shades in palette and gently sweep over  cheekbones, brow bones, and temples, or anywhere light naturally touches  the face." };
+
+}
