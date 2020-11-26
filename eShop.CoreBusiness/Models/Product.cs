@@ -11,5 +11,6 @@ namespace eShop.CoreBusiness.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public string ImageLink { get; set; }
+        public string Description { get; set; }
     }
 }
