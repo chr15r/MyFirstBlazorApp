@@ -21,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        @if (products != null)
+        @if (products != null && products.Count()> 0)
         {
             @foreach (var product in products)
             {
@@ -53,7 +53,7 @@
 
     private void handleSearch(string filter)
     {
-        var x = "";
+        products = searchProduct.Execute(filter);
     }
 
 }
