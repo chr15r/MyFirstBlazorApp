@@ -1,0 +1,17 @@
+﻿@if (this.IsVisible)
+{
+    <h3>VisibilityComponent</h3>
+}
+
+
+@code {
+
+    private bool IsVisible = true;
+
+    public void SetVisibility()
+    {
+        this.IsVisible = !this.IsVisible;
+        StateHasChanged();
+    }
+
+}

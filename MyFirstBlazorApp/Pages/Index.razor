@@ -4,3 +4,19 @@
 
 Welcome to your new app.
 
+<br /><br />
+
+<VisibilityComponent @ref="visibilityComponent"></VisibilityComponent><br />
+
+<button @onclick="Toggle">Toggle Visibility</button>
+
+@code {
+
+    private VisibilityComponent visibilityComponent;
+
+    void Toggle()
+    {
+        this.visibilityComponent.SetVisibility();
+    }
+
+}
